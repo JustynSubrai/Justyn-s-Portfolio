@@ -2,3 +2,8 @@
       font-family: 'cyber';
       src: url(/public/fonts/cyber.ttf);
 }
+
+@font-face {
+      font-family: 'retro';
+      src: url(/public/fonts/cyberRetro.ttf);
+}

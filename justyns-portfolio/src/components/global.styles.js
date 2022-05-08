@@ -9,11 +9,10 @@ export const Contact = styled.footer`
     left: 0;
     z-index: 1;
     *{
-    color: rgb(77, 200, 237);
-    -webkit-text-stroke: .1px rgb(187, 241, 241);
+    color: ${(props) => props.BackgroundColor};
     }
   `;
-
+// rgb(77, 200, 237)
 export const ContactCon = styled.div`
     display: flex;
     justify-content: space-evenly;

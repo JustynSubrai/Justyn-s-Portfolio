@@ -37,9 +37,9 @@ box-shadow: 0 0 1px rgb(77, 200, 237),
         0 0 30px rgb(77, 200, 237),
         0 0 90px rgb(77, 200, 237);
   position:absolute;
-  margin-right: 30px;
-  top: 3vh;
-  right:22vw;
+  top: 50%;
+  right: 80%;
+  transform: translate(-100%, -50%);
   border-radius: 15%;
 `;
 
