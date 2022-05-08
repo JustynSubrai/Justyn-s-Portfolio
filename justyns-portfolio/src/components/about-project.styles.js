@@ -160,6 +160,13 @@ export const ProjectLink = styled.a`
             0 0 120px #4af626;
 `;
 
+
+export const GitHubLink = styled.a`
+    position: fixed;
+    top: 56%;
+`;
+
+
 export const FormSection = styled.section`
     position: absolute;
     top: 33%;

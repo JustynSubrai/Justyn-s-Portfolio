@@ -12,7 +12,7 @@ export const Contact = styled.footer`
     color: ${(props) => props.BackgroundColor};
     }
   `;
-// rgb(77, 200, 237)
+
 export const ContactCon = styled.div`
     display: flex;
     justify-content: space-evenly;
