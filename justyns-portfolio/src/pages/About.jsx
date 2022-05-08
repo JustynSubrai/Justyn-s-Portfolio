@@ -17,6 +17,7 @@ export default function About() {
             <TerminalBackground src="/images/retro.png" alt="terminal background" />
             <Nav>
                 <AboutNav to="/">Home</AboutNav>
+                <AboutNav to="/contact">Contact</AboutNav>
                 <AboutNav to="/about">About</AboutNav>
                 <AboutNav to="/projects">Projects</AboutNav>
             </Nav>

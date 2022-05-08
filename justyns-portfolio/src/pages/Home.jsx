@@ -32,9 +32,10 @@ function NavBar() {
             <Contact >
                 <ContactCon>
                     <a href="https://github.com/JustynSubrai"><FaGithub size={30} /></a>
-                    <Link to='/contact'><AiOutlineMail size={30} /></Link>
+                    <a href="mailto: justynskylarsubrai@gmail.com"><AiOutlineMail size={30} /></a>
                     <a href="https://www.linkedin.com/in/justyn-subrai-856584224/"><AiFillLinkedin size={30} /></a>
-                    <a><IoIosPaper size={30} /></a>
+                    <a href={process.env.PUBLIC_URL + "/JSubrai Resume Oct21.pdf"}
+                    target="_blank" rel="noreferrer"><IoIosPaper size={30} /></a>
                 </ContactCon>
             </Contact>
 
