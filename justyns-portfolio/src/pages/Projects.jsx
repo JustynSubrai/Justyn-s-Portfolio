@@ -24,7 +24,7 @@ export default function Projects() {
                 </Linfo><br />
 
                 <Linfo>
-                    <ProjectLink href="" target="_blank" rel="noreferrer">
+                    <ProjectLink href="https://budget-tracker-app-project.herokuapp.com/" target="_blank" rel="noreferrer">
                         <ProjectImg src="/images/budgetTracker.png" alt="img of Budget Tracker mockup" />
                         <GitHubLink href="https://github.com/JustynSubrai/Budget-Tracker"target="_blank" rel="noreferrer"><FaGithub size={30}/></GitHubLink>
                     </ProjectLink>

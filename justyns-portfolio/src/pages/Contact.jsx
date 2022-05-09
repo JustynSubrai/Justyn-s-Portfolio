@@ -21,8 +21,7 @@ export default function ContactPage() {
         if (!errorMessage) {
             console.log('Submit Form', formState);
         }
-    };
-
+    }
     const handleChange = (e) => {
         if (e.target.name === 'email') {
             const isValid = validateEmail(e.target.value);
