@@ -8,11 +8,12 @@ import { IoIosPaper } from 'react-icons/io';
 import { AiFillGoogleCircle } from 'react-icons/io';
 import { Contact, ContactCon } from '../components/global.styles';
 import { TerminalBackground, Nav, AboutNav, Retro, Title, Linfo, ProjectLink, ProjectUl, ProjectImg, GitHubLink} from '../components/about-project.styles'
+import retro from '../images/retro.png'
 
 export default function Projects() {
     return (
         <Retro>
-            <TerminalBackground className='terminalBackground' src="/images/retro.png" alt="terminal background" />
+            <TerminalBackground className='terminalBackground' src={retro} alt="terminal background" />
             <Title>Gathering documents for specimen 0: Justyn Subrai.</Title>
 
             <ProjectUl>

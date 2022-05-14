@@ -7,6 +7,7 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { IoIosPaper } from 'react-icons/io';
 import { Contact, ContactCon} from '../components/global.styles';
 import { TerminalBackground, AboutNav, Nav, Title, Retro, Info, Bio, Ul, Linfo, getDate } from '../components/about-project.styles'
+import retro from '../images/retro.png'
 
 export default function About() {
     return (
@@ -14,7 +15,7 @@ export default function About() {
 
             <Title>Gathering information on specimen 0: Justyn Subrai.</Title>
 
-            <TerminalBackground src="/images/retro.png" alt="terminal background" />
+            <TerminalBackground src={retro} alt="terminal background" />
             <Nav>
                 <AboutNav to="/">Home</AboutNav>
                 <AboutNav to="/contact">Contact</AboutNav>

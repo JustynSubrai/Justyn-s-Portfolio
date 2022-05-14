@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
+import emailjs from 'emailjs-com';
 import { Link } from 'react-router-dom';
 import '../components/App.css';
 import { validateEmail } from '../utils/helpers';
@@ -8,44 +9,27 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { IoIosPaper } from 'react-icons/io';
 import { Contact, ContactCon } from '../components/global.styles';
 import { TerminalBackground, Nav, AboutNav, Retro, Title, FormSection, Form, Button, Input, TextArea } from '../components/about-project.styles'
+import retro from '../images/retro.png'
 
 export default function ContactPage() {
+    const form = useRef();
 
-    const [formState, setFormState] = useState({ name: '', email: '', message: '' });
-
-    const [errorMessage, setErrorMessage] = useState('');
-    const { name, email, message } = formState;
-
-    const handleSubmit = (e) => {
+    const sendEmail = (e) => {
         e.preventDefault();
-        if (!errorMessage) {
-            console.log('Submit Form', formState);
-        }
-    }
-    const handleChange = (e) => {
-        if (e.target.name === 'email') {
-            const isValid = validateEmail(e.target.value);
-            if (!isValid) {
-                setErrorMessage('Your email is invalid.');
-            } else {
-                setErrorMessage('');
-            }
-        } else {
-            if (!e.target.value.length) {
-                setErrorMessage(`${e.target.name} is required.`);
-            } else {
-                setErrorMessage('');
-            }
-        }
-        if (!errorMessage) {
-            setFormState({ ...formState, [e.target.name]: e.target.value });
-            console.log('Handle Form', formState);
-        }
-    };
+    
+        emailjs.sendForm('service_0tnb9by', 'template_zylyoiq', form.current, 's_lfwLJtljsMGyFs8')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          e.target.reset()
+      };
+      
 
     return (
         <Retro>
-            <TerminalBackground className='terminalBackground' src="/images/retro.png" alt="terminal background" />
+            <TerminalBackground className='terminalBackground' src={retro} alt="terminal background" />
             <Title>Fill in  contact form below to reach Justyn Subrai.</Title>
 
             <Nav>
@@ -56,24 +40,19 @@ export default function ContactPage() {
 
 
             <FormSection>
-                <Form id="contact-form" onSubmit={handleSubmit}>
+                <Form ref={form} onSubmit={sendEmail}>
                     <div>
                         <label htmlFor="name">Name:</label>
-                        <Input type="text" name="name" defaultValue={name} onBlur={handleChange} />
+                        <Input type="text" name="name"/>
                     </div>
                     <div>
                         <label htmlFor="email">Email address:</label>
-                        <Input type="email" name="email" defaultValue={email} onBlur={handleChange} />
+                        <Input type="email" name="email"/>
                     </div>
                     <div>
                         <label htmlFor="message">Message:</label>
-                        <TextArea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
+                        <TextArea name="message" rows="5"/>
                     </div>
-                    {errorMessage && (
-                        <div>
-                            <p className="error-text">{errorMessage}</p>
-                        </div>
-                    )}
                     <Button type="submit">Submit</Button>
                 </Form>
             </FormSection>
