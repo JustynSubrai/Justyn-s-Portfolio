@@ -1,12 +1,11 @@
 import React from "react"
 import '../components/App.css';
-import { Link } from 'react-router-dom';
 import { FaGithub } from 'react-icons/fa';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { AiOutlineMail } from 'react-icons/ai';
 import { IoIosPaper } from 'react-icons/io';
 import { Contact, ContactCon} from '../components/global.styles';
-import { TerminalBackground, AboutNav, Nav, Title, Retro, Info, Bio, Ul, Linfo, getDate } from '../components/about-project.styles'
+import { TerminalBackground, AboutNav, Nav, Title, Retro, Info, Bio, Ul, Linfo} from '../components/about-project.styles'
 import retro from '../images/retro.png'
 
 export default function About() {

@@ -1,8 +1,6 @@
-import React, {useState, useRef} from "react";
+import React, {useRef} from "react";
 import emailjs from 'emailjs-com';
-import { Link } from 'react-router-dom';
 import '../components/App.css';
-import { validateEmail } from '../utils/helpers';
 import { FaGithub } from 'react-icons/fa';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { AiOutlineMail } from 'react-icons/ai';

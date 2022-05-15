@@ -1,14 +1,12 @@
-import React from "react";
-import '../components/App.css';
-import { Link } from 'react-router-dom';
-import { FaGithub } from 'react-icons/fa';
-import { AiFillLinkedin } from 'react-icons/ai';
-import { AiOutlineMail } from 'react-icons/ai';
-import { IoIosPaper } from 'react-icons/io';
-import { AiFillGoogleCircle } from 'react-icons/io';
 import { Contact, ContactCon } from '../components/global.styles';
 import { TerminalBackground, Nav, AboutNav, Retro, Title, Linfo, ProjectLink, ProjectUl, ProjectImg, GitHubLink} from '../components/about-project.styles'
 import retro from '../images/retro.png'
+import React from "react";
+import '../components/App.css';
+import { FaGithub } from 'react-icons/fa';
+import { AiFillLinkedin } from 'react-icons/ai';
+import { AiOutlineMail } from 'react-icons/ai';
+import { IoIosPaper } from 'react-icons/io';;
 
 export default function Projects() {
     return (
